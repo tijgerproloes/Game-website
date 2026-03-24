@@ -1,0 +1,293 @@
+
+body {
+    background-color: green;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+
+nav {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    background-color: #003300;
+}
+
+
+.nav-btn {
+    width: 150px; 
+    height: 70px; 
+    border: none;
+    cursor: pointer;
+
+    background-image: url("blauw.png"); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    text-shadow: 2px 2px 0 black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    outline: none;
+    box-shadow: none;
+}
+
+
+.nav-btn:hover {
+    transform: scale(1.08);
+}
+
+
+section {
+    display: none;
+    padding: 20px;
+}
+
+.active {
+    display: block;
+}
+
+/* Pixel-panelen, stats, inventory, etc. kun je behouden zoals in je oude CSS */
+/* CHARACTER CARD */
+.character-card {
+    background-color: #003300;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+}
+
+/* STATS */
+.stat {
+    margin-bottom: 15px;
+}
+
+.bar {
+    width: 100%;
+    height: 12px;
+    background-color: #022902;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+
+.fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(to right, red, orange);
+    border-radius: 5px;
+    transition: width 1.5s ease;
+    box-shadow: 0 0 8px orange;
+}
+
+
+.html {width:80%;}
+.css {width: 80%;}
+.js {width:60%;}
+.gd {width:60%;}
+
+.inventory-grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(12px,1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.item{
+    background-color: #003300;
+    padding: 10px;
+    border-radius: 10px;
+    text-align:center;
+    transition: 0.2s;
+    cursor: pointer;
+}
+.item:hover{
+    transform: scale(1.05);
+    background-color: #004d00;
+}
+.modal{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height:100%;
+    background: rgba(0,0,0,0.7);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.hidden{
+    display:none;
+}
+
+.modal-content{
+    background:green;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    position: relative;
+}
+
+
+.modal-buttons{
+    display:flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.modal-buttons a{
+background: #00aa00;
+text-decoration: none;
+padding: 10px 15px;
+border-radius: 8px;
+transition: 0.2s;
+font-weight: bold;
+}
+
+.modal-buttons a:hover {
+    transform: scale(1.05);
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: red;
+    border: none;
+    color:white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    background: darkred;
+}
+
+.achievements-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.achievement {
+    background-color: #003300;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.2s;
+    cursor: default;
+}
+
+.achievement:hover {
+    transform: scale(1.05);
+    background-color: #004d00;
+}
+
+#questText {
+    margin: 15px 0;
+    font-style: italic;
+    color: #aaffaa;
+}
+
+nav button {
+    padding: 10px 18px;
+    background: linear-gradient(145deg, #004d00, #006600);
+    border: 1px solid #00aa00;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+    font-weight: bold;
+}
+
+nav button:hover {
+    transform: scale(1.08);
+}
+
+button {
+    padding: 10px 15px;
+    background-image: url("blauw.png");
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+    font-weight: bold;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.pixel-panel{
+    background-image: url("oranje.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 120px;
+    height: 180px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+
+    image-rendering: pixelated;
+
+}
+
+.pixel-panel h2
+.pixel-panel p{
+    margin:0;
+    color:white;
+    text-shadow: 2px 2px 0 black;
+}
+
+.character-info{
+    width:300px;
+    height: 150px;
+    margin-bottom: 20px;
+}
+
+.stats-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    max-width: 700px;
+}
+
+.stat-box{
+    text-align:center;
+}
+
+.stat-box .bar{
+    width:80%;
+    height:10px;
+    margin-top: 8px;
+
+    background-color:#022902;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.stat-box p{
+    margin:0;
+    font-weight:bold;
+    text-shadow: 2px 2px 0 black;
+}
+.fill{
+    height:100%;
+    background: linear-gradient(to right, red, orange);
+}
+

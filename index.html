@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPG website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <nav>
+        <button class="nav-btn" data-target="home">Home</button>
+        <button class="nav-btn" data-target="weather">Weather</button>
+        <button class="nav-btn" data-target="character">Character</button>
+        <button class="nav-btn" data-target="inventory">Inventory</button>
+        <button class="nav-btn" data-target="advice">Advice</button>
+        <button class="nav-btn" data-target="achievements">Achievements</button>
+    </nav>
+
+    
+    <section id="home" class="active">
+        <h1>Home</h1>
+        <p>Welcome, this is the site i made, its game themed. It looks like a portifolio but i worked with some API's because i wanted to understand how they work. There are soms bugs but I could not fix them so im sorry for that. Anyways have fun looking trough the website!</p>
+    </section>
+
+    <section id="weather">
+        <h1>Weather</h1>
+        <input type="text" id="cityInput" placeholder="Enter city">
+        <button class="nav-btn" onclick="getWeather()">Get Weather</button>
+        <p id="weatherText">Weather will appear here</p>
+    </section>
+
+    <section id="character">
+        <h1>Character</h1>
+        <div class="pixel-panel character-info">
+            <h2>Onyx</h2>
+            <p>Level: 5</p>
+            <p>Class: Web Builder</p>
+        </div>
+
+        <h3>Stats</h3>
+        <div class="stats-grid">
+            <div class="pixel-panel stat-box">
+                <p>HTML</p>
+                <div class="bar"><div class="fill html"></div></div>
+            </div>
+            <div class="pixel-panel stat-box">
+                <p>CSS</p>
+                <div class="bar"><div class="fill css"></div></div>
+            </div>
+            <div class="pixel-panel stat-box">
+                <p>JavaScript</p>
+                <div class="bar"><div class="fill js"></div></div>
+            </div>
+            <div class="pixel-panel stat-box">
+                <p>Godot</p>
+                <div class="bar"><div class="fill gd"></div></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="inventory">
+        <h1>Inventory</h1>
+        <div class="inventory-grid">
+            <div class="item"><h3>HTML</h3><p>level 3</p></div>
+            <div class="item"><h3>CSS</h3><p>level 3</p></div>
+            <div class="item"><h3>JavaScript</h3><p>level 2</p></div>
+            <div class="item"><h3>Godot</h3><p>level 2</p></div>
+        </div>
+
+    </section>
+
+    <section id="advice">
+        <h1>Advice</h1>
+        <p id="questText">Klik om advies te krijgen</p>
+        <button class="nav-btn" onclick="getQuest()">Good advice</button>
+    </section>
+
+    <section id="achievements">
+        <h1>Achievements</h1>
+        <div class="achievements-grid">
+            <div class="achievement">
+                <h3>First Website</h3>
+                <p>Built my first website with HTML & CSS</p>
+            </div>
+            <div class="achievement">
+                <h3>First Game</h3>
+                <p>Made my first Godot game!</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
